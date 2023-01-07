@@ -1,9 +1,7 @@
 import './LoginSignup.scss';
 import './Home.scss';
-import React, { useState, useEffect } from 'react'
-// import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
 import { createSearchParams,  Link,  useNavigate } from 'react-router-dom'
-import Nav from '../components/Nav';
 import axios from 'axios';
 
 const Home = () => {
@@ -20,7 +18,6 @@ const Home = () => {
           
       });
        setTotal(comma.format(cat))
-       console.log(total);
 
     }
     // calculate()
@@ -48,7 +45,6 @@ const Home = () => {
         })
 
     }
-      console.log(response);
 
        
     }

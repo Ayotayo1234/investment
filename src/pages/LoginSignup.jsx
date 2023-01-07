@@ -23,7 +23,7 @@ const auth = localStorage.getItem('user');
 if(auth){
   navigate('./profile');
 }
-  },[])
+  })
   const handleClick = event => {
     // 👇️ toggle isActive state variable
     setIsActive(current => !current);
@@ -34,7 +34,6 @@ if(auth){
 	password:password,
 })
 
-console.log(response);
 if(response.status === 201 ){
   localStorage.setItem('user', JSON.stringify(response.data))
   
@@ -49,7 +48,6 @@ if(response.status === 201 ){
   console.log("bad")
 
 }
-console.log(response.status)
   };
   const handleSignup = async () => {
     const response = await axios.post('http://nupat-lms.alimisamuel.com/api/v1/user/register', {

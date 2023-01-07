@@ -20,7 +20,7 @@ const Admin = () => {
   }
   useEffect(() => {
     handleLogin()
-    }, [])
+    })
   return (
         <div className="admin-body">
             <Nav />
